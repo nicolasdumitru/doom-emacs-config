@@ -34,8 +34,7 @@
 
 (setq display-line-numbers-type 'relative)
 
-(load-library "find-lisp")
-(setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))
+(setq org-directory "~/org/")
 
 (use-package! websocket
     :after org-roam)

@@ -30,7 +30,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-gruvbox)
-(setq doom-gruvbox-dark-variant "hard")
+(setq doom-gruvbox-dark-variant "")
 
 (setq display-line-numbers-type 'relative)
 

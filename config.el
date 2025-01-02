@@ -95,3 +95,6 @@
            (file+olp+datetree +org-capture-journal-file)
            "* %U %?\n%i\n%a" :prepend t)
           )))
+
+;; Make calendar weeks begin on Monday
+(setq calendar-week-start-day 1)

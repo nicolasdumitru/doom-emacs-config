@@ -6,8 +6,8 @@ source := justfile_directory()
 target := env_var_or_default('XDG_CONFIG_HOME', env_var('HOME') + '/.config') + '/doom'
 rsync_opts := "-Prlucv --delete-delay"
 
-# Install Doom configuration files
-install:
+# Deploy Doom configuration files
+deploy:
     rsync {{rsync_opts}} {{source}}/ {{target}}/
     doom sync
 
@@ -20,6 +20,6 @@ update:
 diff:
     -diff -rq --exclude='.git' {{source}} {{target}}
 
-# Uninstall Doom configuration
-uninstall:
+# Undeploy Doom configuration
+undeploy:
     rm -rf {{target}}
